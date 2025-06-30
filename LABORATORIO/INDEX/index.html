@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Revista Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/LABORATORIO/shared/css/commun.css" />
+   <link rel="stylesheet" href="styleindex.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar de Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mi Revista Digital</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/LABORATORIO/INDEX/index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Noticias">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Blogs">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/LABORATORIO/views/CONTACTO/contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/LABORATORIO/views/CONFIG/configuracion.html">Configuración</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO -->
+  <header class="header-principal py-5 text-center bg-light">
+    <div class="container">
+      <h1 class="display-4">Mi Revista Digital</h1>
+      <p class="lead subtitulo">Una revista sobre diversos temas</p>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container my-5">
+    <div class="row">
+      <!-- ARTÍCULO PRINCIPAL -->
+      <section class="col-lg-8">
+        <article id="Noticias" class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title"><strong>¡Últimas Noticias!</strong></h2>
+            
+            <div class="card mb-3">
+              <img src="https://imagenes.primicias.ec/files/image_640_360/uploads/2025/04/07/67f42bb02af29.jpeg" class="card-img-top" alt="Lobo terrible">
+              <div class="card-body">
+                <h3 class="card-title">Lobo Terrible ha sido regresado a la vida</h3>
+                <p class="card-text"><small class="text-muted">Fotografía sin fecha publicada por el laboratorio de biociencia Colossal</small></p>
+                <p class="card-text"><strong>El lobo terrible o Aenocyon dirus</strong> era un depredador formidable, con una mandíbula poderosa y dientes adaptados para triturar huesos.</p>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h2><strong>Causas de la Extinción</strong></h2>
+              <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item"><strong>Cambio climático:</strong> El final de la Edad de Hielo trajo consigo cambios drásticos en el clima y la vegetación.</li>
+                <li class="list-group-item"><strong>Extinción de la megafauna:</strong> La desaparición de grandes herbívoros dejó sin alimento a los lobos terribles.</li>
+                <li class="list-group-item"><strong>Competencia con otros depredadores:</strong> Humanos y lobos grises modernos pudieron desplazar a esta especie.</li>
+              </ul>
+            </div>
+
+            <div class="row g-4 mb-4">
+              <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/vPX4tm-J2bU?si=yVsphdK4CUEJEJjK" title="Video de lobo terrible" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <video class="w-100" controls>
+                  <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+                  Tu navegador no soporta este video.
+                </video>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- BARRA LATERAL -->
+      <aside class="col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title"><strong>Información del autor</strong></h2>
+            <p>Me llamo Pérez Alfonso, Gabriel. Cursé estudios en distintas universidades del mundo:</p>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">Universidad Católica Andrés Bello
+                <ul>
+                  <li>Ingeniería Informática</li>
+                  <li>Derecho</li>
+                </ul>
+              </li>
+              <li class="list-group-item">Universidad de Oxford
+                <ul>
+                  <li>Magister Juris</li>
+                  <li>MSc in Criminology and Criminal Justice</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"><strong>Contactanos vía WhatsApp:</strong></h2>
+            <p>0414-8996123</p>
+            
+            <!-- Componente de Bootstrap: Alerta -->
+            <div class="alert alert-info mt-3">
+              <strong>Nuevo!</strong> Ahora también disponible por Telegram.
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer-principal bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3><u>Contáctanos</u></h3>
+          <p>
+            Teléfono: 0412-5980-879 <br />
+            Email: jahadg@gmail.com
+          </p>
+          <audio controls class="w-100">
+            <source src="https://samplelib.com/lib/preview/mp3/sample-3s.mp3" type="audio/mpeg">
+            Tu navegador no soporta este audio.
+          </audio>
+        </div>
+
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6">
+              <dl>
+                <dt class="h5">API</dt>
+                <dd class="mb-3">Interfaz de Programación de Aplicaciones. Un conjunto de reglas y protocolos que permiten que diferentes aplicaciones se comuniquen.</dd>
+              </dl>
+            </div>
+            <div class="col-md-6">
+              <dl>
+                <dt class="h5">SEO</dt>
+                <dd>Search Engine Optimization. Proceso para optimizar un sitio web y aparecer en posiciones destacadas en buscadores como Google.</dd>
+              </dl>
+            </div>
+          </div>
+          
+          <!-- Componente de Bootstrap: Acordeón -->
+          <div class="accordion mt-3" id="footerAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                  Términos de uso
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                <div class="accordion-body">
+                  Todos los contenidos son propiedad de Mi Revista Digital. Prohibida la reproducción sin autorización.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

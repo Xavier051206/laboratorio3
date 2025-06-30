@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Revista Digital/Configuración</title>
+    <link rel="icon" href="https://elucabista.com/wp-content/uploads/2024/05/el-ucabista-favicon.png"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/LABORATORIO/shared/css/commun.css" />
+    <link rel="stylesheet" href="styleconfig.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .img-preview {
+            max-width: 100px;
+            max-height: 100px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Revista Digital</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/LABORATORIO/INDEX/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Noticias">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/LABORATORIO/views/CONTACTO/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/LABORATORIO/views/CONTACTO/contacto.html">Configuración</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+    <!-- Encabezado -->
+    <header class="header-principal py-5 text-center bg-light">
+        <div class="container">
+            <h1 class="display-4">Mi Revista Digital</h1>
+            <p class="lead subtitulo">Configuración del Perfil</p>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container my-5">
+        <div class="row g-4">
+            <!-- Formulario de configuración -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Configuración de perfil</h2>
+                        <form id="profileForm">
+                            <div class="mb-3">
+                                <label for="foto_de_perfil" class="form-label">Foto de perfil:</label>
+                                <input class="form-control" type="file" id="foto_de_perfil" name="foto_de_perfil" accept="image/*">
+                                <img id="imagePreview" class="img-preview" alt="Vista previa de imagen">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label">Apellido:</label>
+                                <input type="text" class="form-control" id="apellido" name="apellido" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo:</label>
+                                <input type="email" class="form-control" id="correo" name="correo" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="cedula" class="form-label">Cédula:</label>
+                                <input type="text" class="form-control" id="cedula" name="cedula" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="fecha_nacimiento" class="form-label">Fecha de nacimiento:</label>
+                                <input class="form-control" type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Género:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="hombre" value="hombre" required>
+                                    <label class="form-check-label" for="hombre">Hombre</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="mujer" value="mujer">
+                                    <label class="form-check-label" for="mujer">Mujer</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="otro" value="otro">
+                                    <label class="form-check-label" for="otro">Otro</label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="color_primario" class="form-label">Color primario de la página:</label>
+                                <input class="form-control form-control-color" type="color" id="color_primario" name="color_primario" value="#ff0055">
+                            </div>
+                            
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="submit" class="btn btn-primary me-md-2">Enviar</button>
+                                <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cambiar clave -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Cambiar clave</h2>
+                        <form id="passwordForm">
+                            <div class="mb-3">
+                                <label for="nombre_usuario" class="form-label">Nombre de usuario:</label>
+                                <input type="text" class="form-control" id="nombre_usuario" name="nombre_usuario" placeholder="Ej. Pedrito 111" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="antigua_clave" class="form-label">Antigua Clave:</label>
+                                <input type="password" class="form-control" id="antigua_clave" name="antigua_clave" minlength="8" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="nueva_clave" class="form-label">Nueva clave:</label>
+                                <input type="password" class="form-control" id="nueva_clave" name="nueva_clave" minlength="8" required>
+                            </div>
+                            
+                            <!-- Componente de Bootstrap: Alerta -->
+                            <div class="alert alert-warning">
+                                <strong>Importante:</strong> La nueva clave debe tener al menos 8 caracteres.
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Cambiar Clave</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de usuarios registrados -->
+        <section class="mt-5">
+            <h2 class="mb-4">Usuarios Registrados</h2>
+            
+            <!-- Componente de Bootstrap: Table responsive -->
+            <div class="table-responsive">
+                <table class="table table-striped table-hover" id="usuariosTable">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Imagen de Perfil</th>
+                            <th>Correo</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Cédula</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usuariosBody">
+                        <!-- Los usuarios se cargarán dinámicamente aquí -->
+                    </tbody>
+                    <tfoot>
+                        <tr class="table-info">
+                            <td colspan="6">Total personas:</td>
+                            <td id="totalPersonas">0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- Modal para mostrar resultados -->
+        <div class="modal fade" id="resultModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Resultado del envío</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <!-- El contenido se llenará dinámicamente -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer-principal bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3><u>Contáctanos</u></h3>
+                    <p>
+                        Teléfono: 0412-5980-879 <br />
+                        Email: jahadg@gmail.com
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 Mi Revista Digital. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script para manejar los formularios -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileForm = document.getElementById('profileForm');
+            const passwordForm = document.getElementById('passwordForm');
+            const resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
+            const fotoPerfilInput = document.getElementById('foto_de_perfil');
+            const imagePreview = document.getElementById('imagePreview');
+            
+            // Cargar usuarios almacenados al iniciar
+            cargarUsuarios();
+            
+            // Vista previa de la imagen de perfil
+            fotoPerfilInput.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        imagePreview.src = e.target.result;
+                        imagePreview.style.display = 'block';
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            // Función para formatear fecha
+            function formatDate(dateString) {
+                const date = new Date(dateString);
+                const day = date.getDate().toString().padStart(2, '0');
+                const month = (date.getMonth() + 1).toString().padStart(2, '0');
+                const year = date.getFullYear();
+                return `${day}/${month}/${year}`;
+            }
+            
+            // Función para cargar usuarios desde localStorage
+            function cargarUsuarios() {
+                const usuarios = JSON.parse(localStorage.getItem('usuariosRegistrados') || '[]');
+                const tbody = document.getElementById('usuariosBody');
+                tbody.innerHTML = '';
+                
+                if (usuarios.length === 0) {
+                    // Agregar usuarios de ejemplo si no hay ninguno
+                    const usuariosEjemplo = [
+                        {
+                            foto_de_perfil: 'https://via.placeholder.com/50',
+                            correo: 'jhadh@gmail.com',
+                            nombre: 'Jose Dinr',
+                            apellido: 'Perez',
+                            cedula: '33.555.855',
+                            fecha_nacimiento: '1987-05-15'
+                        },
+                        {
+                            foto_de_perfil: 'https://via.placeholder.com/50',
+                            correo: 'reer@gmail.com',
+                            nombre: 'Reinaldo',
+                            apellido: 'Perez',
+                            cedula: '31.575.456',
+                            fecha_nacimiento: '1987-05-31'
+                        },
+                        {
+                            foto_de_perfil: 'https://via.placeholder.com/50',
+                            correo: 'ggt@gmail.com',
+                            nombre: 'Gabriel',
+                            apellido: 'Galar',
+                            cedula: '33.335.755',
+                            fecha_nacimiento: '1999-07-29'
+                        }
+                    ];
+                    
+                    localStorage.setItem('usuariosRegistrados', JSON.stringify(usuariosEjemplo));
+                    cargarUsuarios(); // Volver a cargar
+                    return;
+                }
+                
+                usuarios.forEach(usuario => {
+                    const newRow = document.createElement('tr');
+                    
+                    newRow.innerHTML = `
+                        <td><img src="${usuario.foto_de_perfil || 'https://via.placeholder.com/50'}" alt="Perfil" class="profile-img"></td>
+                        <td>${usuario.correo}</td>
+                        <td>${usuario.nombre}</td>
+                        <td>${usuario.apellido}</td>
+                        <td>${usuario.cedula}</td>
+                        <td>${formatDate(usuario.fecha_nacimiento)}</td>
+                        <td><button class="btn btn-sm btn-danger" onclick="eliminarUsuario(this, '${usuario.cedula}')">Eliminar</button></td>
+                    `;
+                    
+                    tbody.appendChild(newRow);
+                });
+                
+                // Actualizar el contador
+                document.getElementById('totalPersonas').textContent = usuarios.length;
+            }
+            
+            // Función para guardar usuarios en localStorage
+            function guardarUsuarios(usuarios) {
+                localStorage.setItem('usuariosRegistrados', JSON.stringify(usuarios));
+            }
+            
+            // Función para agregar usuario a la tabla y localStorage
+            function agregarUsuarioATabla(usuario) {
+                // Obtener usuarios existentes
+                const usuarios = JSON.parse(localStorage.getItem('usuariosRegistrados') || '[]');
+                
+                // Verificar si el usuario ya existe (por cédula)
+                const usuarioExistente = usuarios.find(u => u.cedula === usuario.cedula);
+                if (usuarioExistente) {
+                    document.getElementById('modalBody').innerHTML = `
+                        <div class="alert alert-danger">
+                            <h4>Error</h4>
+                            <p>Ya existe un usuario con esta cédula.</p>
+                        </div>
+                    `;
+                    resultModal.show();
+                    return;
+                }
+                
+                // Agregar nuevo usuario
+                usuarios.push(usuario);
+                guardarUsuarios(usuarios);
+                
+                // Recargar la tabla
+                cargarUsuarios();
+            }
+            
+            // Función para eliminar usuario (global para que funcione en los botones)
+            window.eliminarUsuario = function(button, cedula) {
+                // Obtener usuarios existentes
+                const usuarios = JSON.parse(localStorage.getItem('usuariosRegistrados') || '[]');
+                
+                // Filtrar para eliminar el usuario con la cédula especificada
+                const nuevosUsuarios = usuarios.filter(u => u.cedula !== cedula);
+                guardarUsuarios(nuevosUsuarios);
+                
+                // Recargar la tabla
+                cargarUsuarios();
+                
+                // Mostrar mensaje de éxito
+                document.getElementById('modalBody').innerHTML = `
+                    <div class="alert alert-success">
+                        Usuario eliminado correctamente.
+                    </div>
+                `;
+                resultModal.show();
+            };
+            
+            // Función para manejar el envío de formularios
+            function handleFormSubmit(e, formType) {
+                e.preventDefault();
+                
+                const form = e.target;
+                const formData = {};
+                
+                // Recopilar datos del formulario
+                const inputs = form.elements;
+                for (let i = 0; i < inputs.length; i++) {
+                    const input = inputs[i];
+                    if (input.name) {
+                        if (input.type === 'file') {
+                            // Manejar la imagen de perfil
+                            if (input.files && input.files[0]) {
+                                const reader = new FileReader();
+                                reader.onload = function(e) {
+                                    formData[input.name] = e.target.result;
+                                    
+                                    // Completar el resto de los datos
+                                    for (let j = 0; j < inputs.length; j++) {
+                                        const innerInput = inputs[j];
+                                        if (innerInput.name && innerInput.type !== 'file') {
+                                            if (innerInput.type === 'radio' && !innerInput.checked) continue;
+                                            if (innerInput.type === 'checkbox') {
+                                                formData[innerInput.name] = innerInput.checked;
+                                            } else {
+                                                formData[innerInput.name] = innerInput.value;
+                                            }
+                                        }
+                                    }
+                                    
+                                    // Si es el formulario de perfil, agregar a la tabla
+                                    if (formType === 'configuración de perfil') {
+                                        agregarUsuarioATabla(formData);
+                                    }
+                                    
+                                    // Mostrar mensaje de éxito
+                                    document.getElementById('modalBody').innerHTML = `
+                                        <div class="alert alert-success">
+                                            <h4>¡Envío exitoso!</h4>
+                                            <p>Los datos del formulario de ${formType} se han enviado correctamente.</p>
+                                            <p>El nuevo usuario ha sido agregado a la tabla.</p>
+                                        </div>
+                                    `;
+                                    resultModal.show();
+                                    
+                                    // Opcional: resetear el formulario
+                                    form.reset();
+                                    imagePreview.style.display = 'none';
+                                };
+                                reader.readAsDataURL(input.files[0]);
+                            }
+                            continue;
+                        }
+                        
+                        if (input.type === 'radio' && !input.checked) continue;
+                        if (input.type === 'checkbox') {
+                            formData[input.name] = input.checked;
+                        } else {
+                            formData[input.name] = input.value;
+                        }
+                    }
+                }
+                
+                // Si no hay archivo, procesar inmediatamente
+                if (!fotoPerfilInput.files[0] && formType === 'configuración de perfil') {
+                    agregarUsuarioATabla(formData);
+                    
+                    document.getElementById('modalBody').innerHTML = `
+                        <div class="alert alert-success">
+                            <h4>¡Envío exitoso!</h4>
+                            <p>Los datos del formulario de ${formType} se han enviado correctamente.</p>
+                            <p>El nuevo usuario ha sido agregado a la tabla.</p>
+                        </div>
+                    `;
+                    resultModal.show();
+                    
+                    form.reset();
+                }
+                
+                // Para el formulario de cambio de clave
+                if (formType === 'cambio de clave') {
+                    document.getElementById('modalBody').innerHTML = `
+                        <div class="alert alert-success">
+                            <h4>¡Cambio de clave exitoso!</h4>
+                            <p>La contraseña ha sido actualizada correctamente.</p>
+                        </div>
+                    `;
+                    resultModal.show();
+                    
+                    form.reset();
+                }
+            }
+            
+            // Event listeners para los formularios
+            profileForm.addEventListener('submit', (e) => handleFormSubmit(e, 'configuración de perfil'));
+            passwordForm.addEventListener('submit', (e) => handleFormSubmit(e, 'cambio de clave'));
+        });
+    </script>
+</body>
+</html>
