@@ -14,7 +14,7 @@ La elección de Bootstrap  trae  ventajas clave:
 
 *Desarrollo rápido: Componentes preconstruidos (como cards y modales) redujeron el tiempo de implementación.
 *Sistema de grid: Garantiza adaptabilidad en dispositivos móviles sin media queries manuales.
-*Alternativas consideradas: Tailwind CSS (requería más configuración) y CSS puro.
+*Alternativas consideradas: Tailwind CSS y CSS puro.
 
 3. Persistencia de Datos con localStorage
 
