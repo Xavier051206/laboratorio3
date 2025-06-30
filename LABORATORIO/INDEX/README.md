@@ -19,7 +19,6 @@ La elección de Bootstrap  trae  ventajas clave:
 
 3. Persistencia de Datos con localStorage
 
-*Simplicidad: Ideal para almacenar preferencias de usuario (ej: tema oscuro) sin backend.
 *Limitaciones conscientes.
 *Datos solo accesibles en el mismo navegador.
 
